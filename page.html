@@ -1,0 +1,1482 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> MusicGen-Stem </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./page_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./page_files/scrolling-nav.css" rel="stylesheet">
+
+    <style>
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+
+      }
+      h2 {
+      text-decoration: underline;
+    }
+  
+      .image-container img {
+        max-width: 75%;
+        max-height: 100%;
+
+      }
+    </style>
+
+
+  </head>
+
+  <body id="page-top">
+
+    <header class="bg-dark text-white">
+
+      <div class="container text-center">
+        <h1>MusicGen-Stem: Multi-stem music generation and edition through autoregressive modeling
+        </h1>
+      </div>
+    </header>
+
+    <div class="image-container">
+      <img src="src/Images/fig1_v2.png" alt="Your Image">
+    </div>
+
+
+
+
+    </p></div></section>
+
+
+
+
+    <section id="Samples" class="bg-light">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-13 mx-auto">
+            <h2>Text to Music Samples</h2>
+            <p></p>
+            <br>
+            Here we use our model in the standard text-to-music setup. Since our model generates 3 stems we present bellow both the stems isolated and the mix.
+            <p></p>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prompt</th>
+                        <th> </th>
+                        <th style="text-align: center;"> Stems</th>
+                        <th style="text-align: center;"> Mix</th>
+                        <th style="text-align: center;"> MusicGen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Jazz piece featuring a piano and accompanying bass and drums.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/1/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/1/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/9.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/1/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/1/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Rock song with a prominent guitar riff and driving drum beat.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/17/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/17/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/10.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/17/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/17/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Hip-hop track with a catchy hook and a deep bass.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/27/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/27/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/26.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/27/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/27/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Reggae song with an off-beat rhythm.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/34/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/34/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/30.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/34/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/34/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">Country ballad with piano and guitar.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/41/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/41/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/43.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/41/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/41/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Chill lo-fi beat with piano</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/60/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/60/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/62.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/60/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/60/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Folk song with a simple acoustic guitar melody.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/77/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/77/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/79.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/77/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/77/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">R&B ballad with a smooth piano melody.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/84/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/84/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/83.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/84/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/84/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Funk track with a groovy bassline.</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/101/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/101/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/103.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/101/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/101/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">80s new wave song with a synthesizer</td>
+                        <td> Drums </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/119/drums.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/119/mixture.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/114.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Bass </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/119/bass.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Other </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/text2music/119/other.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                    </tr>
+
+                    
+                </tbody>
+            </table>
+
+
+              <br>  <br>
+                  <h2>Music Editing samples</h2>
+                <p></p>
+                <br>
+                
+                Here we showcase the editing capabilities of our model. For this task we feed the model with an audio prompt and ask the model to generate missing stems. We optain the audio prompt by removing the original stem that we want to replace using hybrid transformer Demucs.
+                <br>
+                <br>
+                <table>
+                  
+                  <tbody>
+                    <tr style="border-top: 40px solid rgba(0, 0, 0, 0); border-bottom: 10px solid rgba(0, 0, 0, 0)">
+                      <td colspan="4" style="text-align: center; font-weight: bold;"> Bass editing: </td>
+                    </tr>
+                      <tr>
+                        <th>Original song</th>
+                        <th>Audio Prompt</th>
+                        <th>Method </th>
+                        <th>Generated Bass</th>
+                        <th>Mix</th>
+                      </tr>
+                      <tr style="border-top:1px solid black">
+                          <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                
+                                  <source src="src/samples/editing/bass/52_text/orig.mp3" type="audio/wav"></audio></td>
+                          <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                
+                         <source src="src/samples/editing/bass/52_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                          <td> MusicGen-Stem </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/editing/bass/52_text/bass_2.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/52_text/mix_our.mp3" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                          <td> MSDM PT</td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/editing/bass/52_text/bass_msdm_retrained.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/52_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                          <td> MSDM RT</td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/editing/bass/52_text/bass_msdm_retrained.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/52_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                      </tr>
+                      <td> MusicGen Instruct </td>
+                      <td style='text-align: center;'>
+                          N/A
+                      </td>
+                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/52_text/instruct.mp3" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr style="border-top:1px solid black">
+                      <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+            
+                              <source src="src/samples/editing/bass/87_text/orig.mp3" type="audio/wav"></audio></td>
+                      <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+            
+                     <source src="src/samples/editing/bass/87_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                      <td> MusicGen-Stem </td>
+                      <td>
+                          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/87_text/bass_2.mp3" type="audio/wav">
+                          </audio>
+                      </td>
+                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/87_text/mix_our.mp3" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                      <td> MSDM PT</td>
+                      <td>
+                          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/87_text/bass_msdm_retrained.mp3" type="audio/wav">
+                          </audio>
+                      </td>
+                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/87_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                      <td> MSDM RT</td>
+                      <td>
+                          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                              <source src="src/samples/editing/bass/87_text/bass_msdm_retrained.mp3" type="audio/wav">
+                          </audio>
+                      </td>
+                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/87_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                  </tr>
+                  <td> MusicGen Instruct </td>
+                  <td style='text-align: center;'>
+                      N/A
+                  </td>
+                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/87_text/instruct.mp3" type="audio/wav"></audio></td>
+              </tr>
+              <tr style="border-top:1px solid black">
+                  <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                      <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+        
+                          <source src="src/samples/editing/bass/121_text/orig.mp3" type="audio/wav"></audio></td>
+                  <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                      <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+        
+                 <source src="src/samples/editing/bass/121_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                  <td> MusicGen-Stem </td>
+                  <td>
+                      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/121_text/bass_2.mp3" type="audio/wav">
+                      </audio>
+                  </td>
+                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/121_text/mix_our.mp3" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                  <td> MSDM PT</td>
+                  <td>
+                      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/121_text/bass_msdm_retrained.mp3" type="audio/wav">
+                      </audio>
+                  </td>
+                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/121_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                  <td> MSDM RT</td>
+                  <td>
+                      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                          <source src="src/samples/editing/bass/121_text/bass_msdm_retrained.mp3" type="audio/wav">
+                      </audio>
+                  </td>
+                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/121_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+              </tr>
+              <td> MusicGen Instruct </td>
+              <td style='text-align: center;'>
+                  N/A
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/121_text/instruct.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <tr style="border-top:1px solid black">
+              <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                  <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+    
+                      <source src="src/samples/editing/bass/130_text/orig.mp3" type="audio/wav"></audio></td>
+              <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                  <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+    
+             <source src="src/samples/editing/bass/130_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+              <td> MusicGen-Stem </td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/130_text/bass_2.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/130_text/mix_our.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+              <td> MSDM PT</td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/130_text/bass_msdm_retrained.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/130_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+              <td> MSDM RT</td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/bass/130_text/bass_msdm_retrained.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/130_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <td> MusicGen Instruct </td>
+          <td style='text-align: center;'>
+              N/A
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/130_text/instruct.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr style="border-top:1px solid black">
+          <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+                  <source src="src/samples/editing/bass/239_text/orig.mp3" type="audio/wav"></audio></td>
+          <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+         <source src="src/samples/editing/bass/239_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+          <td> MusicGen-Stem </td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/239_text/bass_2.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/239_text/mix_our.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr>
+          <td> MSDM PT</td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/239_text/bass_msdm_retrained.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/239_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr>
+          <td> MSDM RT</td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/bass/239_text/bass_msdm_retrained.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/239_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <td> MusicGen Instruct </td>
+      <td style='text-align: center;'>
+          N/A
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/bass/239_text/instruct.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr style="border-top:1px solid black">
+      <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+              <source src="src/samples/editing/bass/315_text/orig.mp3" type="audio/wav"></audio></td>
+      <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+     <source src="src/samples/editing/bass/315_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+      <td> MusicGen-Stem </td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/315_text/bass_2.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/bass/315_text/mix_our.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr>
+      <td> MSDM PT</td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/315_text/bass_msdm_retrained.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/bass/315_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr>
+      <td> MSDM RT</td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/bass/315_text/bass_msdm_retrained.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/bass/315_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <td> MusicGen Instruct </td>
+  <td style='text-align: center;'>
+      N/A
+  </td>
+  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      <source src="src/samples/editing/bass/315_text/instruct.mp3" type="audio/wav"></audio></td>
+</tr>
+                      
+                      <tr style="border-top: 40px solid rgba(0, 0, 0, 0); border-bottom: 10px solid rgba(0, 0, 0, 0)">
+                        <td colspan="4" style="text-align: center; font-weight: bold;"> Drums editing: </td>
+                      </tr>
+                        <tr>
+                          <th>Original song</th>
+                          <th>Audio Prompt</th>
+                          <th>Method </th>
+                          <th>Generated Drums</th>
+                          <th>Mix</th>
+                        </tr>
+                        <tr style="border-top:1px solid black">
+                            <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  
+                                    <source src="src/samples/editing/drums/5_text/orig.mp3" type="audio/wav"></audio></td>
+                            <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                                <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  
+                           <source src="src/samples/editing/drums/5_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                            <td> MusicGen-Stem </td>
+                            <td>
+                                <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                    <source src="src/samples/editing/drums/5_text/drums_2.mp3" type="audio/wav">
+                                </audio>
+                            </td>
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/5_text/mix_our.mp3" type="audio/wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td> MSDM PT</td>
+                            <td>
+                                <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                    <source src="src/samples/editing/drums/5_text/drums_msdm_retrained.mp3" type="audio/wav">
+                                </audio>
+                            </td>
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/5_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                        </tr>
+                        <tr>
+                            <td> MSDM RT</td>
+                            <td>
+                                <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                    <source src="src/samples/editing/drums/5_text/drums_msdm_retrained.mp3" type="audio/wav">
+                                </audio>
+                            </td>
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/5_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                        </tr>
+                        <td> MusicGen Instruct </td>
+                        <td style='text-align: center;'>
+                            N/A
+                        </td>
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/5_text/instruct.mp3" type="audio/wav"></audio></td>
+                    </tr>
+                    <tr style="border-top:1px solid black">
+                        <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                            <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              
+                                <source src="src/samples/editing/drums/27_text/orig.mp3" type="audio/wav"></audio></td>
+                        <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                            <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              
+                       <source src="src/samples/editing/drums/27_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                        <td> MusicGen-Stem </td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/27_text/drums_2.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/27_text/mix_our.mp3" type="audio/wav"></audio></td>
+                    </tr>
+                    <tr>
+                        <td> MSDM PT</td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/27_text/drums_msdm_retrained.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/27_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                    </tr>
+                    <tr>
+                        <td> MSDM RT</td>
+                        <td>
+                            <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                <source src="src/samples/editing/drums/27_text/drums_msdm_retrained.mp3" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/27_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                    </tr>
+                    <td> MusicGen Instruct </td>
+                    <td style='text-align: center;'>
+                        N/A
+                    </td>
+                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/27_text/instruct.mp3" type="audio/wav"></audio></td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                        <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          
+                            <source src="src/samples/editing/drums/28_text/orig.mp3" type="audio/wav"></audio></td>
+                    <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                        <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          
+                   <source src="src/samples/editing/drums/28_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                    <td> MusicGen-Stem </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/28_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/28_text/mix_our.mp3" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td> MSDM PT</td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/28_text/drums_msdm_retrained.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/28_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td> MSDM RT</td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/editing/drums/28_text/drums_msdm_retrained.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/28_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+                </tr>
+                <td> MusicGen Instruct </td>
+                <td style='text-align: center;'>
+                    N/A
+                </td>
+                <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                    <source src="src/samples/editing/drums/28_text/instruct.mp3" type="audio/wav"></audio></td>
+            </tr>
+            <tr style="border-top:1px solid black">
+                <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                    <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      
+                        <source src="src/samples/editing/drums/39_text/orig.mp3" type="audio/wav"></audio></td>
+                <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                    <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      
+               <source src="src/samples/editing/drums/39_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+                <td> MusicGen-Stem </td>
+                <td>
+                    <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/39_text/drums_2.mp3" type="audio/wav">
+                    </audio>
+                </td>
+                <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                    <source src="src/samples/editing/drums/39_text/mix_our.mp3" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td> MSDM PT</td>
+                <td>
+                    <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/39_text/drums_msdm_retrained.mp3" type="audio/wav">
+                    </audio>
+                </td>
+                <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                    <source src="src/samples/editing/drums/39_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td> MSDM RT</td>
+                <td>
+                    <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                        <source src="src/samples/editing/drums/39_text/drums_msdm_retrained.mp3" type="audio/wav">
+                    </audio>
+                </td>
+                <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                    <source src="src/samples/editing/drums/39_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+            </tr>
+            <td> MusicGen Instruct </td>
+            <td style='text-align: center;'>
+                N/A
+            </td>
+            <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                <source src="src/samples/editing/drums/39_text/instruct.mp3" type="audio/wav"></audio></td>
+        </tr>
+        <tr style="border-top: 40px solid rgba(0, 0, 0, 0); border-bottom: 10px solid rgba(0, 0, 0, 0)">
+          <td colspan="4" style="text-align: center; font-weight: bold;"> Other editing: </td>
+        </tr>
+          <tr>
+            <th>Original song</th>
+            <th>Audio Prompt</th>
+            <th>Method </th>
+            <th>Generated other</th>
+            <th>Mix</th>
+          </tr>
+          <tr style="border-top:1px solid black">
+              <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+                  <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+    
+                      <source src="src/samples/editing/other/87/orig.mp3" type="audio/wav"></audio></td>
+              <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+                  <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+    
+             <source src="src/samples/editing/other/87/audio_prompt.mp3" type="audio/wav"></audio></td>
+              <td> MusicGen-Stem </td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/other/87/other.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/87/mix_our.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+              <td> MSDM PT</td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/other/87/other_msdm_retrained.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/87/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+              <td> MSDM RT</td>
+              <td>
+                  <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                      <source src="src/samples/editing/other/87/other_msdm_retrained.mp3" type="audio/wav">
+                  </audio>
+              </td>
+              <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/87/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+          </tr>
+          <td> MusicGen Instruct </td>
+          <td style='text-align: center;'>
+              N/A
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/87/instruct.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr style="border-top:1px solid black">
+          <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+                  <source src="src/samples/editing/other/130/orig.mp3" type="audio/wav"></audio></td>
+          <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+              <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+         <source src="src/samples/editing/other/130/audio_prompt.mp3" type="audio/wav"></audio></td>
+          <td> MusicGen-Stem </td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/130/other.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/130/mix_our.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr>
+          <td> MSDM PT</td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/130/other_msdm_retrained.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/130/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <tr>
+          <td> MSDM RT</td>
+          <td>
+              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                  <source src="src/samples/editing/other/130/other_msdm_retrained.mp3" type="audio/wav">
+              </audio>
+          </td>
+          <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/130/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+      </tr>
+      <td> MusicGen Instruct </td>
+      <td style='text-align: center;'>
+          N/A
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/130/instruct.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr style="border-top:1px solid black">
+      <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+              <source src="src/samples/editing/other/171_text/orig.mp3" type="audio/wav"></audio></td>
+      <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+          <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+     <source src="src/samples/editing/other/171_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+      <td> MusicGen-Stem </td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/171_text/other.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/171_text/mix_our.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr>
+      <td> MSDM PT</td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/171_text/other_msdm_retrained.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/171_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <tr>
+      <td> MSDM RT</td>
+      <td>
+          <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+              <source src="src/samples/editing/other/171_text/other_msdm_retrained.mp3" type="audio/wav">
+          </audio>
+      </td>
+      <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/171_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+  </tr>
+  <td> MusicGen Instruct </td>
+  <td style='text-align: center;'>
+      N/A
+  </td>
+  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      <source src="src/samples/editing/other/171_text/instruct.mp3" type="audio/wav"></audio></td>
+</tr>
+<tr style="border-top:1px solid black">
+  <td rowspan="4" style="vertical-align: middle; text-align: center; ">
+      <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+          <source src="src/samples/editing/other/349_text/orig.mp3" type="audio/wav"></audio></td>
+  <td rowspan="4" style="vertical-align: middle; text-align: center; border-right:">
+      <audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+
+ <source src="src/samples/editing/other/349_text/audio_prompt.mp3" type="audio/wav"></audio></td>
+  <td> MusicGen-Stem </td>
+  <td>
+      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/349_text/other.mp3" type="audio/wav">
+      </audio>
+  </td>
+  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      <source src="src/samples/editing/other/349_text/mix_our.mp3" type="audio/wav"></audio></td>
+</tr>
+<tr>
+  <td> MSDM PT</td>
+  <td>
+      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/349_text/other_msdm_retrained.mp3" type="audio/wav">
+      </audio>
+  </td>
+  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      <source src="src/samples/editing/other/349_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+</tr>
+<tr>
+  <td> MSDM RT</td>
+  <td>
+      <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+          <source src="src/samples/editing/other/349_text/other_msdm_retrained.mp3" type="audio/wav">
+      </audio>
+  </td>
+  <td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+      <source src="src/samples/editing/other/349_text/mix_msdm_rt.mp3" type="audio/wav"></audio></td>
+</tr>
+<td> MusicGen Instruct </td>
+<td style='text-align: center;'>
+  N/A
+</td>
+<td><audio controls="" class="audio-player" preload="metadata" style="width: 250px;">
+  <source src="src/samples/editing/other/349_text/instruct.mp3" type="audio/wav"></audio></td>
+</tr>
+        
+                  </tbody>
+                </table>
+              </center>
+              
+              
+              
+              <br>  <br>
+              
+              <center>
+                  
+                  <br>  <br>
+    <h2> Dual song</h2>
+    <p></p>
+    <br>
+    Here we experiment a bit, we regenerate every stem with respect to the other ones and then sum them.
+        
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Original Song</th>
+                    <th> </th>
+                    <th style="text-align: center;"> Audio Prompts</th>
+                    <th style="text-align: center;"> Stems </th>
+                    <th style="text-align: center;"> Mix </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/130_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/290_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/293_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/349_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/427_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr style="border-top:1px solid black">
+                    <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/orig.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td> Drums </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/drums_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/drums_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/mix_our.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Bass </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/bass_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/bass_2.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Other </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/other_prompt.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/new_everything/500_text/other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+                
+            </tbody>
+          </table>
+        </center>
+    
+                  
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <!-- <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p> -->
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./page_files/jquery.min.js"></script>
+    <script src="./page_files/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./page_files/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="./page_files/scrolling-nav.js"></script>
+
+    <script> function setupCallback(elem, elems) {
+      elem.addEventListener("play", function () {
+        for (var other of elems) {
+          if (other !== elem) {
+            other.pause();
+            // other.currentTime = 0.;
+          }
+        }
+      });
+    }
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.body.getElementsByTagName("audio");
+      for (var elem of elems) {
+        setupCallback(elem, elems);
+      }
+    }); </script>
+</body></html>
