@@ -55,6 +55,157 @@
 
     </p></div></section>
 
+    <section id="Samples" class="bg-light">
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-13 mx-auto">
+              <h2>An example of music generation and stem editing</h2>
+              <p></p>
+              <br>
+              We first generate some music according to a textual prompt:
+              <p></p>
+              <br>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Prompt</th>
+                          <th> </th>
+                          <th style="text-align: center;"> Generated Stems</th>
+                          <th style="text-align: center;"> Mix</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr style="border-top:1px solid black">
+                          <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Slow pop song with an acoustic guitar.</td>
+                          <td> Drums </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/drums.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/mixture.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td> Bass </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/bass.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td> Other </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/other.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                      </tr>
+  
+                      
+                  </tbody>
+              </table>
+
+
+              <br> <br> Then, we want to keep the bass and drums and replace the other stem by a piano melody: 
+              <p></p>
+              <br>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Text Prompt</th>
+                          <th> </th>
+                          <th style="text-align: center;"> Input Stems</th>
+                          <th style="text-align: center;"> Generated Other Stem</th>
+                          <th style="text-align: center;"> Mix</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr style="border-top:1px solid black">
+                          <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Slow pop song with a piano.</td>
+                          <td> Drums </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/drums.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/new_other.mp3" type="audio/wav">
+                              </audio>
+                      <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/gen_edit/0/mixture_new_other.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+
+                      <tr>
+                          <td> Bass </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/bass.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                      </tr>
+  
+                      
+                  </tbody>
+              </table>
+  
+              <br> <br> Finally, we want to keep the bass and the other stem and replace the drums by oriental percussions: 
+              <p></p>
+              <br>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Text Prompt</th>
+                          <th> </th>
+                          <th style="text-align: center;"> Input Stems</th>
+                          <th style="text-align: center;"> Generated Drums Stem</th>
+                          <th style="text-align: center;"> Mix</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr style="border-top:1px solid black">
+                          <td rowspan="3" style="vertical-align: middle; text-align: center; border-right:10px solid rgba(0, 0, 0, 0)">Oriental percussions.</td>
+                          <td> Bass </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/bass.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                          <td rowspan="3" style="vertical-align: middle; text-align: center;border-right: 3px solid rgba(0, 0, 0, 0)">
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/oriental_drums.mp3" type="audio/wav">
+                              </audio>
+                      <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                        <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                            <source src="src/samples/gen_edit/0/mixture_oriental_drums.mp3" type="audio/wav">
+                        </audio>
+                    </td>
+                </tr>
+
+                      <tr>
+                          <td> Other </td>
+                          <td>
+                              <audio controls class="audio-player" preload="metadata" style="width: 250px;">
+                                  <source src="src/samples/gen_edit/0/new_other.mp3" type="audio/wav">
+                              </audio>
+                          </td>
+                      </tr>
+  
+                      
+                  </tbody>
+              </table>
+  
+
+
 
 
 
